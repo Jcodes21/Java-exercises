@@ -10,18 +10,25 @@ public class LoopExercises {
 
     public static void main(String[] args) {
 
-        // TODO: 1 - Write a for loop to print numbers 1 to 10
+        // TODO: 1 - Write a for loop to print numbers 1 to 10c
         // Hint: for (int i = 1; i <= 10; i++) { ... }
-
+        for (int i = 0; i <= 10; i++)  {
+            System.out.print(i);
+        }
 
         // TODO: 2 - Write a while loop to print numbers 10 down to 1 (countdown)
         // Hint: Declare a variable before the loop, use a condition, and decrement inside the loop.
-
+        int clock = 11;
+        while (clock >= 1){
+            System.out.println(clock);
+            clock--;
+        }
 
         // TODO: 3 - Write a do-while loop that runs at least once
         // Print "This runs at least once!" inside the loop.
         // Use a condition that is false so the loop only runs once.
-        // Hint: do { ... } while (condition);
+        // Hint: do { ... } while (condition)
+        // System.out.println("This runs atleast once");
 
 
         // TODO: 4 - Write a for loop to print only even numbers from 1 to 20
