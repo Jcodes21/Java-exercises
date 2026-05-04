@@ -30,22 +30,39 @@ public class LoopExercises {
         // Hint: do { ... } while (condition)
         // System.out.println("This runs atleast once");
 
-
+        do {
+            System.out.println("This runs at least once");
+        }
+        while(0 > 1);
         // TODO: 4 - Write a for loop to print only even numbers from 1 to 20
         // Hint: Use an if statement with the modulus operator (%) inside the loop,
         //       or increment by 2 starting from 2.
+        for (int i = 2; i <=20; i++) {
+            if (i % 2 == 0)
+            System.out.println(i);
+        }
 
 
         // TODO: 5 - Write a for loop to calculate the factorial of 5 (5! = 120)
         // Declare a variable called factorial and initialize it to 1.
         // Multiply factorial by each number from 1 to 5.
         // Print the result.
+        int factorial = 1;
+        for (int i = 1; i < 5; i++) {
+            int result = factorial * i;
+            System.out.println(result);
+        }
 
 
         // TODO: 6 - Use an enhanced for loop (for-each) to iterate over a String array
         // Declare a String array called fruits with at least 4 fruit names.
         // Use an enhanced for loop to print each fruit.
 
+        String[] fruits = {"Apple", "Tomato", "Banana", "Cherry", "Apricot"};
+
+        for ( String fruit : fruits ) {
+            System.out.println(fruit);
+        }
 
         // TODO: 7 - Write a nested for loop to print a 3x3 multiplication table
         // The output should look like:
@@ -55,12 +72,30 @@ public class LoopExercises {
         // Hint: Use System.out.print() for values on the same row,
         //       and System.out.println() to move to the next row.
 
+        for (int i = 1; i < 4; i++) {
+            //int mNum = 1;
+            System.out.print(2 * i);
+            System.out.print(2 * i);
+            for (int j = 0; j < 1; j++){
+                System.out.println(i *= 2);
+                System.out.println(i *= 3);
+                System.out.println(i *= 4);
+            }
+
+
+        }
 
         // TODO: 8 - Use break and continue in a loop
         // Write a for loop from 1 to 10:
         //   - Use 'continue' to skip the number 5 (do not print it)
         //   - Use 'break' to stop the loop when you reach 8
         // Print each number that is not skipped.
+
+        for (int i = 0; i <= 10; i++) {
+           // continue;
+            System.out.println(i);
+            break;
+        }
 
     }
 }
