@@ -20,7 +20,6 @@ public class Operators {
         System.out.println(a*b);
         System.out.println(a/b);
 
-
         // TODO: 2 - Use the modulus operator (%) to check if a number is even
         // Declare an int variable called number with any value.
         // Print the result of number % 2

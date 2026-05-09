@@ -1,5 +1,4 @@
 package com.amigoscode._1_beginners._1_thebasics;
-
 /**
  * Exercise: Type Casting
  *
@@ -10,7 +9,6 @@ package com.amigoscode._1_beginners._1_thebasics;
 public class TypeCasting {
 
     public static void main(String[] args) {
-
         // TODO: 1 - Widen an int to a double (implicit casting)
         // Declare an int variable with any value, then assign it to a double variable.
         // Print both variables to see the result.
@@ -26,8 +24,6 @@ public class TypeCasting {
         int cMe2 = (int) cMe;
         System.out.println(cMe);
         System.out.println(cMe2);
-
-
 
         // TODO: 3 - Cast an int to a char to get the character it represents
         // Hint: int value 65 corresponds to 'A' in ASCII

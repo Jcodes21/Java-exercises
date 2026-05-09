@@ -19,7 +19,6 @@ public class StringExercises {
         // Hint: Use the .length() method
         System.out.println(message.length());
 
-
         // TODO: 2 - Convert 'message' to uppercase and lowercase, and print both
         // Hint: Use .toUpperCase() and .toLowerCase()
         System.out.println(message.toUpperCase());
@@ -44,10 +43,14 @@ public class StringExercises {
 
         // TODO: 7 - Split the 'csv' string by commas into a String array and print each element
         // Hint: Use .split(",") then loop through the resulting array
+        String[] csv1 = csv.split(",");
+        System.out.println(csv1);
+
 
         // TODO: 8 - Check if two strings are equal using .equals() (not ==)
         // Create two String variables with the same text content and compare them.
         // Print the result of .equals() and explain why == may not work for Strings.
         System.out.println(padded.equals(message));
+        // == is for number types, maybe primitives in general
     }
 }

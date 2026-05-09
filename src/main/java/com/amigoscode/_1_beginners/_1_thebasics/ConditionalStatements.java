@@ -1,7 +1,5 @@
 package com.amigoscode._1_beginners._1_thebasics;
-
 import com.amigoscode._3_oop._6_solid.SolidExercises;
-
 /**
  * Exercise: Conditional Statements
  *
@@ -76,8 +74,6 @@ public class ConditionalStatements {
                 break;
             default:
         }
-
-
         // TODO: 5 - Use a switch statement with a String
         // Declare a String variable called month (e.g., "February").
         // Use a switch statement to print the number of days in that month.
@@ -101,8 +97,6 @@ public class ConditionalStatements {
             default:
         }
 
-
-
         // TODO: 6 - Use a switch expression (Java 14+) to return a value
         // Using the 'day' variable from above, assign the day name to a String
         // using a switch expression with arrow syntax:
@@ -114,6 +108,16 @@ public class ConditionalStatements {
         //String dayName = switch (day) {
         ///    case 1 -> "Monday";
         //};
+        String dayName = switch(day){
+            case 1 -> System.out.println("Monday");
+            case 2 -> System.out.println("Tuesday");
+            case 3 -> System.out.println("Wednesday");
+            case 4 -> System.out.println("Thursday");
+            case 5 -> System.out.println("Friday");
+            case 6 -> System.out.println("Saturday");
+            case 7 -> System.out.println("Sunday");
+
+        };
 
 
         // TODO: 7 - Write a nested if statement to check if a number is positive AND even
@@ -123,7 +127,6 @@ public class ConditionalStatements {
         //     If even, print "Positive and even"
         //     Else print "Positive and odd"
         //   Else print "Not positive"
-
         int value = 8;
         int test1 = -3;
 
