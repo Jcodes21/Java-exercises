@@ -1,7 +1,5 @@
 package com.amigoscode._1_beginners._1_thebasics;
-
 import java.sql.SQLOutput;
-
 /**
  * Exercise: Arrays
  *
@@ -9,7 +7,6 @@ import java.sql.SQLOutput;
  * Arrays are fixed-size containers that hold elements of the same type.
  */
 public class ArrayExercises {
-
     public static void main(String[] args) {
 
         // TODO: 1 - Declare and initialize an int array called 'numbers' with 5 values
@@ -24,11 +21,9 @@ public class ArrayExercises {
         System.out.println(numbers[0]);
         System.out.println(numbers[4]);
 
-
         // TODO: 3 - Change the value of the third element (index 2) to 99 and print it
         // Hint: numbers[2] = 99;
         numbers[3] = 99;
-
 
         // TODO: 4 - Get the length of the array and print it
         // Hint: Use the .length property (not a method, no parentheses)

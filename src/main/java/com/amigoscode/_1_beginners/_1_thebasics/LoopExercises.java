@@ -1,5 +1,4 @@
 package com.amigoscode._1_beginners._1_thebasics;
-
 /**
  * Exercise: Loops
  *
@@ -7,9 +6,7 @@ package com.amigoscode._1_beginners._1_thebasics;
  * Loops are fundamental for iterating over data and performing repetitive tasks.
  */
 public class LoopExercises {
-
     public static void main(String[] args) {
-
         // TODO: 1 - Write a for loop to print numbers 1 to 10c
         // Hint: for (int i = 1; i <= 10; i++) { ... }
         for (int i = 0; i <= 10; i++)  {
@@ -53,11 +50,9 @@ public class LoopExercises {
             System.out.println(result);
         }
 
-
         // TODO: 6 - Use an enhanced for loop (for-each) to iterate over a String array
         // Declare a String array called fruits with at least 4 fruit names.
         // Use an enhanced for loop to print each fruit.
-
         String[] fruits = {"Apple", "Tomato", "Banana", "Cherry", "Apricot"};
 
         for ( String fruit : fruits ) {
@@ -71,7 +66,6 @@ public class LoopExercises {
         //   3  6  9
         // Hint: Use System.out.print() for values on the same row,
         //       and System.out.println() to move to the next row.
-
         for (int i = 1; i < 4; i++) {
             //int mNum = 1;
             System.out.print(2 * i);
@@ -81,8 +75,6 @@ public class LoopExercises {
                 System.out.println(i *= 3);
                 System.out.println(i *= 4);
             }
-
-
         }
 
         // TODO: 8 - Use break and continue in a loop
@@ -90,12 +82,10 @@ public class LoopExercises {
         //   - Use 'continue' to skip the number 5 (do not print it)
         //   - Use 'break' to stop the loop when you reach 8
         // Print each number that is not skipped.
-
         for (int i = 0; i <= 10; i++) {
            // continue;
             System.out.println(i);
             break;
         }
-
     }
 }

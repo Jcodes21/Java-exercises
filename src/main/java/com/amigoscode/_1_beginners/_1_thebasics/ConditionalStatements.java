@@ -78,7 +78,6 @@ public class ConditionalStatements {
         // Declare a String variable called month (e.g., "February").
         // Use a switch statement to print the number of days in that month.
         // Handle at least 3-4 months plus a default case.
-
         String month = "February";
 
         switch(month) {
@@ -108,15 +107,20 @@ public class ConditionalStatements {
         //String dayName = switch (day) {
         ///    case 1 -> "Monday";
         //};
-        //String dayName = switch(day){
-           // case 1 -> System.out.println("Monday");
-            //case 2 -> System.out.println("Tuesday");
-            //case 3 -> System.out.println("Wednesday");
-            //case 4 -> System.out.println("Thursday");
-            //case 5 -> System.out.println("Friday");
-            //case 6 -> System.out.println("Saturday");
-            //case 7 -> System.out.println("Sunday");
-        //};
+        // ? https://www.reddit.com/r/learnprogramming/comments/1d9dwtb/why_am_i_getting_this_error_the_switch_expression/
+        // https://docs.oracle.com/en/java/javase/13/language/switch-expressions.html#GUID-BA4F63E3-4823-43C6-A5F3-BAA4A2EF3ADC
+        String dayName = switch(day) {
+            case 1 -> "Monday";
+            case 2 -> "Tuesday";
+            case 3 -> "Wednesday";
+            case 4 -> "Thursday";
+            case 5 -> "Friday";
+            case 6 -> "Saturday";
+            case 7 -> "Sunday";
+            default -> {
+                throw new IllegalStateException("Invalid day: " + day);
+            }
+        };
 
         // TODO: 7 - Write a nested if statement to check if a number is positive AND even
         // Declare an int variable called value.
@@ -138,6 +142,5 @@ public class ConditionalStatements {
             System.out.println("Not positive");
         }
         }
-
     }
 }
