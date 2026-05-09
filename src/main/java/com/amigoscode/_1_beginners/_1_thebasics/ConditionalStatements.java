@@ -116,9 +116,7 @@ public class ConditionalStatements {
             case 5 -> System.out.println("Friday");
             case 6 -> System.out.println("Saturday");
             case 7 -> System.out.println("Sunday");
-
         };
-
 
         // TODO: 7 - Write a nested if statement to check if a number is positive AND even
         // Declare an int variable called value.
