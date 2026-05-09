@@ -128,13 +128,15 @@ public class ConditionalStatements {
         int value = 8;
         int test1 = -3;
 
-        if (test1 > 0 && test1 % 2 == 0) {
-            System.out.println("Positive and even");
+        if (test1 > 0) {
+                if (test1 % 2 == 0) {
+                System.out.println("Positive and even");
         }
         else if (test1 > 0 && test1 % 2 == 1) {
             System.out.println("Positive and odd");
         } else {
             System.out.println("Not positive");
+        }
         }
 
     }

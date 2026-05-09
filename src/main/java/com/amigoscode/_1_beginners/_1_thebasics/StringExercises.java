@@ -43,13 +43,9 @@ public class StringExercises {
 
         // TODO: 7 - Split the 'csv' string by commas into a String array and print each element
         // Hint: Use .split(",") then loop through the resulting array
-        String[] csv1 = {};
-        System.out.println(csv1.length);
-
-        csv.split(",");
-        for (int i = 0; i <= 5; i++) {
-            //csv1.add(csv);
-            System.out.println(Arrays.toString(csv1));
+        String[] csv1 = csv.split(",");
+        for (String s: csv1) {
+            System.out.println(s);
         }
 
         // TODO: 8 - Check if two strings are equal using .equals() (not ==)
