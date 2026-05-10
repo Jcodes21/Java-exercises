@@ -66,26 +66,30 @@ public class LoopExercises {
         //   3  6  9
         // Hint: Use System.out.print() for values on the same row,
         //       and System.out.println() to move to the next row.
-        for (int i = 1; i < 4; i++) {
-            //int mNum = 1;
-            System.out.print(2 * i);
-            System.out.print(2 * i);
-            for (int j = 0; j < 1; j++){
-                System.out.println(i *= 2);
-                System.out.println(i *= 3);
-                System.out.println(i *= 4);
+        System.out.println("task 7");
+        for (int i = 0; i < 3; i++) {
+            int t7 = 1;
+            System.out.println(t7 * 1);
+            for (int j = 0; j <1; j++){
+                System.out.print(t7 * 2);
+                System.out.print(t7 * 3);
             }
         }
+        System.out.println(" <- task 7 ends here");
 
         // TODO: 8 - Use break and continue in a loop
         // Write a for loop from 1 to 10:
         //   - Use 'continue' to skip the number 5 (do not print it)
         //   - Use 'break' to stop the loop when you reach 8
         // Print each number that is not skipped.
-        for (int i = 0; i <= 10; i++) {
-           // continue;
+        for (int i = 1; i <= 10; i++) {
+            if (i==5) {
+                continue;
+            }
+            if(i==9){
+                break;
+            }
             System.out.println(i);
-            break;
         }
     }
 }
