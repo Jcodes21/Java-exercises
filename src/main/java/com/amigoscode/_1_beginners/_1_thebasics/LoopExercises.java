@@ -67,17 +67,14 @@ public class LoopExercises {
         // Hint: Use System.out.print() for values on the same row,
         //       and System.out.println() to move to the next row.
         System.out.println("task 7");
+        int t7 = 1;
         for (int i = 0; i < 3; i++) {
-            int t7 = 1;
-            int t7b = 2;
-            int t7c = 3;
                 System.out.print(t7);
                 System.out.print(t7 *2);
                 System.out.print(t7 *3);
                 t7++;
             for (int j = 0; j < 3; j++);
             System.out.println();
-
         }
         System.out.println(" <- task 7 ends here");
 
