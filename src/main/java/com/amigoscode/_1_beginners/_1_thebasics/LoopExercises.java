@@ -69,11 +69,15 @@ public class LoopExercises {
         System.out.println("task 7");
         for (int i = 0; i < 3; i++) {
             int t7 = 1;
-            System.out.println(t7 * 1);
-            for (int j = 0; j <1; j++){
-                System.out.print(t7 * 2);
-                System.out.print(t7 * 3);
-            }
+            int t7b = 2;
+            int t7c = 3;
+                System.out.print(t7);
+                System.out.print(t7 *2);
+                System.out.print(t7 *3);
+                t7++;
+            for (int j = 0; j < 3; j++);
+            System.out.println();
+
         }
         System.out.println(" <- task 7 ends here");
 
@@ -82,6 +86,7 @@ public class LoopExercises {
         //   - Use 'continue' to skip the number 5 (do not print it)
         //   - Use 'break' to stop the loop when you reach 8
         // Print each number that is not skipped.
+        // https://www.w3schools.com/java/java_break.asp
         for (int i = 1; i <= 10; i++) {
             if (i==5) {
                 continue;
