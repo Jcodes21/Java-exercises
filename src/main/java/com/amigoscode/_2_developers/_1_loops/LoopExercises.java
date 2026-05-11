@@ -7,7 +7,6 @@ package com.amigoscode._2_developers._1_loops;
  * accumulators, pattern printing, reverse iteration, and controlled infinite loops.
  */
 public class LoopExercises {
-
     /**
      * Prints a multiplication table from 1 to n using nested loops.
      * Example for n=3:
@@ -23,11 +22,13 @@ public class LoopExercises {
         // TODO: 1 - Use nested for loops to print an n x n multiplication table.
         //  Outer loop iterates rows 1..n, inner loop iterates columns 1..n.
         //  Print each product followed by a tab, and a newline after each row.
-        int n = 3;
+        // int n = 3; we dont need this line since the variable n is already defined in scope in method params, consider printMultiplicationTable(5);
         for(int i = 0; i < n; i++){
-            System.out.print(i);
-            for(int j = 0; j <= n; j++){
-                System.out.println();
+            System.out.print(n);
+            System.out.println();
+            n++;
+            for(int j = 0; j <= n; j++){ //lol
+                System.out.print("  "); //tab
             }
         }
     }
@@ -38,12 +39,21 @@ public class LoopExercises {
      *
      * @param n upper bound (inclusive)
      * @return the accumulated sum following the rules above
-     */
+*/
     public static int sumWithSkipAndStop(int n) {
         int sum = 0;
+        int n1 = 101;
         // TODO: 2 - Loop from 1 to n. Use 'continue' to skip multiples of 3.
         //  Use 'break' to stop if sum exceeds 100. Add the current number to sum otherwise.
-
+        for(int i=0; i < n1; i++){
+            System.out.println(i);
+            if(sum > 0){  //ikik
+                continue;
+            }
+            if(sum > 100){
+                break;
+            }
+        }
         return sum;
     }
 
@@ -76,7 +86,9 @@ public class LoopExercises {
         long accumulator = 1;
         // TODO: 4 - Use a for loop from 1 to n (inclusive), multiplying accumulator
         //  by the loop variable each iteration. Return the result.
+        for(int i = 0; i<n; i++){
 
+        }
         return accumulator;
     }
 
@@ -94,7 +106,9 @@ public class LoopExercises {
         // TODO: 5 - Use nested loops to print a centered pyramid of stars.
         //  For each row i (0-based), print (rows - i - 1) spaces followed by (2 * i + 1) stars.
         //  Print a newline after each row.
-
+        for(int i = 0; i<=rows; i++){
+            System.out.println("*");
+        }
     }
 
     /**
