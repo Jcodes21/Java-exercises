@@ -106,10 +106,13 @@ public class LoopExercises {
         // TODO: 5 - Use nested loops to print a centered pyramid of stars.
         //  For each row i (0-based), print (rows - i - 1) spaces followed by (2 * i + 1) stars.
         //  Print a newline after each row.
-        for(int i = 0; i<=rows; i++){
-            System.out.println("*");
-        }
-    }
+        for(int i = 0; i <= rows -i -1; i++){
+            System.out.print(" ");
+            for(int j = 0; j < 2 * i + 1; j++){
+                System.out.print("*");
+                System.out.println();
+            }
+        }}
 
     /**
      * Returns elements of the array in reverse order as a comma-separated string.
