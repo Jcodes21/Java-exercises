@@ -47,7 +47,7 @@ public class LoopExercises {
         //  Use 'break' to stop if sum exceeds 100. Add the current number to sum otherwise.
         for(int i=0; i < n1; i++){
             System.out.println(i);
-            if(sum > 0){  //ikik
+            if(sum % 3 == 0){
                 continue;
             }
             if(sum > 100){
