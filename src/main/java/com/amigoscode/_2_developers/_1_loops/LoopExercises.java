@@ -1,5 +1,7 @@
 package com.amigoscode._2_developers._1_loops;
 
+import static java.lang.Math.random;
+
 /**
  * Loop Exercises
  *
@@ -32,14 +34,13 @@ public class LoopExercises {
             }
         }
     }
-
     /**
      * Returns the sum of all numbers from 1 to n, but skips multiples of 3
      * and stops entirely if the running sum exceeds 100.
      *
      * @param n upper bound (inclusive)
      * @return the accumulated sum following the rules above
-*/
+     */
     public static int sumWithSkipAndStop(int n) {
         int sum = 0;
         int n1 = 101;
@@ -71,6 +72,12 @@ public class LoopExercises {
         //  Use nested loops to iterate through the matrix.
         //  When the target is found, set result to "Found at [row][col]" and
         //  use 'break search;' to exit both loops.
+        //search
+        //int [][] matrix = {{5,4,3} , {3,6,4}};
+        for(int[] matrices : matrix){i
+
+        for(){
+        }
 
         return result;
     }
@@ -87,9 +94,9 @@ public class LoopExercises {
         // TODO: 4 - Use a for loop from 1 to n (inclusive), multiplying accumulator
         //  by the loop variable each iteration. Return the result.
         for(int i = 0; i<n; i++){
-
+            long result = accumulator * i;
         }
-        return accumulator;
+        return result;
     }
 
     /**
@@ -106,13 +113,24 @@ public class LoopExercises {
         // TODO: 5 - Use nested loops to print a centered pyramid of stars.
         //  For each row i (0-based), print (rows - i - 1) spaces followed by (2 * i + 1) stars.
         //  Print a newline after each row.
-        for(int i = 0; i <= rows -i -1; i++){
-            System.out.print(" ");
-            for(int j = 0; j < 2 * i + 1; j++){
-                System.out.print("*");
-                System.out.println();
+        // https://www.youtube.com/watch?v=RCPof5TC-Gs&t=16s
+        // Ian saw me struggle and suggested code below, i commented explanation
+        for (int i = 1; i <= rows; i++) { // if i is less than 5 ++i, i1 r5
+            // Print leading spaces
+            for (int s = 1; s <= rows - i; s++) { // repeats printing of star, notic for loop closes to let spaces finish printing before moving to stars
+                System.out.print(" ");
             }
-        }}
+            // Print stars: 2*i - 1 gives 1, 3, 5, 7, 9...
+            for (int j = 1; j <= 2 * i - 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println(); // new line after each row, notice for loop above is closed so stars can print out before new line
+        }
+    }
+
+    // For each row i (0-based) - i dont understand instructions n seek clarity
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 
     /**
      * Returns elements of the array in reverse order as a comma-separated string.
@@ -126,6 +144,9 @@ public class LoopExercises {
         // TODO: 6 - Use a for loop starting from the last index down to 0.
         //  Append each element to sb. Add ", " between elements but not after the last one.
 
+        for(int i = 0; i < 10;i++){
+
+        }
         return sb.toString();
     }
 
@@ -143,16 +164,26 @@ public class LoopExercises {
         // TODO: 7 - Use while(true) to create an infinite loop.
         //  Each iteration: increment attempts, generate a random int between 1 and 100,
         //  and break if it matches the target.
-
+        int a = 0;
+;
+        while(a < 8){
+            attempts++;
+            double genNum = random();
+           // System.out.println(genNum* 10);
+//            System.out.println((int)genNum);
+            if(genNum == target){
+                break;
+            }
+        }
         return attempts;
-    }
+    }}
 
     public static void main(String[] args) {
         System.out.println("=== Multiplication Table (4x4) ===");
-        printMultiplicationTable(4);
+        //printMultiplicationTable(4);
 
         System.out.println("\n=== Sum with Skip and Stop (n=50) ===");
-        System.out.println("Sum: " + sumWithSkipAndStop(50));
+        //System.out.println("Sum: " + sumWithSkipAndStop(50));
 
         System.out.println("\n=== Find in Matrix ===");
         int[][] matrix = {

@@ -18,6 +18,7 @@ public class IfStatements {
     public static String evenOrOdd(int number) {
         // TODO: 1 - Use the ternary operator ( condition ? valueIfTrue : valueIfFalse )
         //  to return "Even" or "Odd" based on whether number % 2 == 0.
+        result = (number % 2 == 0) ? "Even" : "Odd";
         return null;
     }
 
@@ -33,6 +34,8 @@ public class IfStatements {
     public static boolean isEligibleForLoan(int age, double income, boolean hasGuarantor) {
         // TODO: 2 - Use a single return statement with && and || operators
         //  to express the eligibility condition described above.
+
+        age > 18 && income > 30.000 || hasGuarantor {
         return false;
     }
 
@@ -46,7 +49,9 @@ public class IfStatements {
     public static String getGrade(int score) {
         // TODO: 3 - Use nested ternary operators to return the correct grade.
         //  Example pattern: score >= 90 ? "A" : score >= 80 ? "B" : ...
-        return null;
+            String grade = (score >= 90) ? "A": (score >= 80) ? "B" : (score >= 70) ? "C":(score >= 60) ? "D" : "F";
+        return grade;
+
     }
 
     /**
@@ -59,8 +64,12 @@ public class IfStatements {
     public static int safeLength(String text) {
         // TODO: 4 - Check if text is null before calling text.length().
         //  Return -1 if text is null, otherwise return text.length().
-        return 0;
-    }
+        if(text == null){
+            return -1;
+        }
+        else{
+        return text.length();
+    }}
 
     /**
      * Checks if two strings are equal, handling nulls safely.
@@ -75,8 +84,12 @@ public class IfStatements {
         //  If both are null, return true.
         //  If only one is null, return false.
         //  Otherwise, use a.equals(b) — never use == for string content comparison.
+        if( a.equals(b) && b == null){
+            return true;
+        }
+        else {
         return false;
-    }
+    }}
 
     /**
      * Returns the name of the day of the week for numbers 1 (Monday) through 7 (Sunday).
@@ -95,6 +108,18 @@ public class IfStatements {
         //      ...
         //      default -> "Invalid";
         //  };
+            // METHOD WANTS INT
+        String day = "Monday";
+        switch(day){
+            case 1 ->  System.out.println("Monday");
+            case 2 ->  System.out.println("Tuesday");
+            case 3 ->  System.out.println("Wednesday");
+            case 4 ->  System.out.println("Thursay");
+            case 5 ->  System.out.println("Friday");
+            case 6 ->  System.out.println("Saturday");
+            case 7 ->  System.out.println("Sunday");
+            default: System.out.println("Invalid");
+        }
         return null;
     }
 
