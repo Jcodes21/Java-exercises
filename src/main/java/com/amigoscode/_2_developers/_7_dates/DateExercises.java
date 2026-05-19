@@ -20,7 +20,8 @@ public class DateExercises {
      */
     public static LocalDate getToday() {
         // TODO: 1 - Use LocalDate.now() to get and return today's date.
-        return null;
+        LocalDate currentDate = LocalDate.now();
+        return currentDate;
     }
 
     /**
@@ -30,7 +31,8 @@ public class DateExercises {
      */
     public static LocalDate getIndependenceDay() {
         // TODO: 2 - Use LocalDate.of(year, month, day) to create and return July 4, 1776.
-        return null;
+        LocalDate pastTime = LocalDate.of(1776, 7,4);
+        return pastTime;
     }
 
     /**
@@ -40,7 +42,8 @@ public class DateExercises {
      */
     public static LocalDateTime getCurrentDateTime() {
         // TODO: 3 - Use LocalDateTime.now() to get and return the current date and time.
-        return null;
+        LocalDateTime timeNow = LocalDateTime.now();
+        return timeNow;
     }
 
     /**
@@ -56,6 +59,9 @@ public class DateExercises {
         // TODO: 4 - Use plusDays(), plusMonths(), and plusYears() on the date.
         //  Remember: LocalDate is immutable, so each method returns a NEW LocalDate.
         //  Chain the calls or apply them sequentially.
+        date.plusDays(8);
+        date.plusMonths(2);
+        date.plusYears(5000);
         return null;
     }
 

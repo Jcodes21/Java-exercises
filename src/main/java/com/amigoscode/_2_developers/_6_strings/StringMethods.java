@@ -17,11 +17,12 @@ public class StringMethods {
      * @return e.g., "equals: false, equalsIgnoreCase: true"
      */
     public static String compareEquality(String a, String b) {
-        // TODO: 1 - Use equals() and equalsIgnoreCase() to compare a and b.
-        //  Return a string in the format: "equals: <result>, equalsIgnoreCase: <result>"
-
-
-        return null;
+            // TODO: 1 - Use equals() and equalsIgnoreCase() to compare a and b.
+            //  Return a string in the format: "equals: <result>, equalsIgnoreCase: <result>"
+            String eq = a.equals(b);
+            String eqIC = a.equalsIgnoreCase(b);
+            String result = "equals: " + + "equalsIgnoreCase:"
+            return null;
     }
 
     /**
@@ -36,7 +37,14 @@ public class StringMethods {
         // TODO: 2 - Use a.compareTo(b) and return:
         //  "before" if result < 0, "equal" if result == 0, "after" if result > 0.
 
-        a.compareTo(b);
+        String result = a.compareTo(b);
+        if(result < 0){
+            System.out.println("before");
+        } else if(result == 0){
+            System.out.println("equal");
+        }  else{
+            System.out.println("after");
+        }
         return null;
     }
 
@@ -88,8 +96,9 @@ public class StringMethods {
         // TODO: 5 - Use text.split(delimiter) to get an array of parts.
         //  Build a result string with each part on a new line: "[i] part"
         //  Example: "[0] apple\n[1] banana\n[2] cherry"
+        text.split(delimeter);
         return null;
-        text.split();
+
     }
 
     /**
@@ -119,8 +128,8 @@ public class StringMethods {
     public static String substringDemo(String text, int beginIndex, int endIndex) {
         // TODO: 7 - Use text.substring(beginIndex, endIndex) to extract a portion of text.
         //  Return the substring.
-        text.substring(beginIndex, endIndex);
-        return null;
+        String result = text.substring(beginIndex, endIndex);
+        return result;
     }
 
     /**
@@ -135,6 +144,7 @@ public class StringMethods {
     public static String formatReceipt(String item, int quantity, double price) {
         // TODO: 8 - Use String.format() to create a formatted string.
         //  Format: "%-15s x%-5d $%.2f" (left-align item in 15 chars, quantity in 5, price with 2 decimals)
+        item.format();
 
         return null;
     }
