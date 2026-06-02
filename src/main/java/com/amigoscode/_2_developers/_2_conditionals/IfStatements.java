@@ -7,7 +7,6 @@ package com.amigoscode._2_developers._2_conditionals;
  * proper string comparison, and switch expressions.
  */
 public class IfStatements {
-
     /**
      * Returns "Even" if the number is even, "Odd" otherwise.
      * Must use the ternary operator (not if/else).
@@ -18,8 +17,8 @@ public class IfStatements {
     public static String evenOrOdd(int number) {
         // TODO: 1 - Use the ternary operator ( condition ? valueIfTrue : valueIfFalse )
         //  to return "Even" or "Odd" based on whether number % 2 == 0.
-        result = (number % 2 == 0) ? "Even" : "Odd";
-        return null;
+        String result = (number % 2 == 0 ? "Even" : "Odd");
+        return result;
     }
 
     /**
@@ -29,14 +28,13 @@ public class IfStatements {
      * @param age          applicant's age
      * @param income       annual income
      * @param hasGuarantor whether the applicant has a guarantor
-     * @return true if eligible
+     * @return
      */
-    public static boolean isEligibleForLoan(int age, double income, boolean hasGuarantor) {
+    public static String isEligibleForLoan(int age, double income, boolean hasGuarantor) {
         // TODO: 2 - Use a single return statement with && and || operators
         //  to express the eligibility condition described above.
-
-        age > 18 && income > 30.000 || hasGuarantor {
-        return false;
+        if(age > 18 && income > 30.000 || hasGuarantor){
+        return isEligibleForLoan(age, income, hasGuarantor);
     }
 
     /**
@@ -49,9 +47,8 @@ public class IfStatements {
     public static String getGrade(int score) {
         // TODO: 3 - Use nested ternary operators to return the correct grade.
         //  Example pattern: score >= 90 ? "A" : score >= 80 ? "B" : ...
-            String grade = (score >= 90) ? "A": (score >= 80) ? "B" : (score >= 70) ? "C":(score >= 60) ? "D" : "F";
-        return grade;
-
+            String grade = (score >= 90) ? "A": (score >= 80) ? "B" : (score >= 70) ? "C" : (score >= 60) ? "D" : "F";
+            return grade;
     }
 
     /**
@@ -84,7 +81,9 @@ public class IfStatements {
         //  If both are null, return true.
         //  If only one is null, return false.
         //  Otherwise, use a.equals(b) — never use == for string content comparison.
-        if( a.equals(b) && b == null){
+            String a = "";
+            String b = "";
+        if(a.equals(b) && b == null){
             return true;
         }
         else {
@@ -114,7 +113,7 @@ public class IfStatements {
             case 1 ->  System.out.println("Monday");
             case 2 ->  System.out.println("Tuesday");
             case 3 ->  System.out.println("Wednesday");
-            case 4 ->  System.out.println("Thursay");
+            case 4 ->  System.out.println("Thursday");
             case 5 ->  System.out.println("Friday");
             case 6 ->  System.out.println("Saturday");
             case 7 ->  System.out.println("Sunday");
