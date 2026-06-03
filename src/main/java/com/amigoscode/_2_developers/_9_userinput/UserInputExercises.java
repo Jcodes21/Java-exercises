@@ -1,5 +1,4 @@
 package com.amigoscode._2_developers._9_userinput;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 /**
@@ -9,7 +8,6 @@ import java.util.Scanner;
  * Always validate user input — never trust it blindly!
  */
 public class UserInputExercises {
-
     /**
      * Reads a single line of text from the user and returns it.
      *
@@ -19,11 +17,11 @@ public class UserInputExercises {
     public static String readString(Scanner scanner) {
         // TODO: 1 - Prompt the user with "Enter your name: " (use System.out.print).
         //  Read a full line using scanner.nextLine() and return it.
-        Scanner scan = new Scanner();
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter your name: ");
         String input = scan.nextLine();
         return input;
     }
-
     /**
      * Reads an integer from the user with validation.
      * If the user enters something that is not an integer, catches the exception
@@ -39,12 +37,12 @@ public class UserInputExercises {
         //    catch InputMismatchException, print "Invalid input!", and return -1.
         //  Don't forget to consume the leftover newline with scanner.nextLine()
         //  after reading the int (both in success and failure cases).
-        Scanner scan = new Scanner();
+        Scanner scan = new Scanner(System.in);
         System.out.println("Enter a number");
         try {
             int input = scan.nextInt();
         }
-        catch InputMismatchException{
+        catch(InputMismatchException){
             System.out.println("Invalid Field");
         }
         return input;

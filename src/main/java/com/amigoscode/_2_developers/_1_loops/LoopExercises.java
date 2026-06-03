@@ -1,7 +1,5 @@
 package com.amigoscode._2_developers._1_loops;
-
 import static java.lang.Math.random;
-
 /**
  * Loop Exercises
  *
@@ -18,20 +16,17 @@ public class LoopExercises {
      *
      * @param n the size of the multiplication table
      */
-    // ntm = number to multiply
-
     public static void printMultiplicationTable(int n) {
         // TODO: 1 - Use nested for loops to print an n x n multiplication table.
         //  Outer loop iterates rows 1..n, inner loop iterates columns 1..n.
         //  Print each product followed by a tab, and a newline after each row.
         // int n = 3; we dont need this line since the variable n is already defined in scope in method params, consider printMultiplicationTable(5);
-        for(int i = 0; i < n; i++){
-            System.out.print(n);
-            System.out.println();
-            n++;
-            for(int j = 0; j <= n; j++){ //lol
-                System.out.print("  "); //tab
+        for(int i = 1; i < n+1; i++){
+            for(int j = 1; j <= n; j++){
+                System.out.print(i*j);
+                System.out.print("    ");
             }
+            System.out.println();
         }
     }
     /**
@@ -46,7 +41,6 @@ public class LoopExercises {
         // TODO: 2 - Loop from 1 to n. Use 'continue' to skip multiples of 3.
         //  Use 'break' to stop if sum exceeds 100. Add the current number to sum otherwise.
         for (int i = 1; i <= n; i++) {
-
             if (i % 3 == 0) {
                 continue;
             }
@@ -57,9 +51,7 @@ public class LoopExercises {
         }
         return sum;
     }
-}
-
-/**
+    /**
      * Searches a 2D array for a target value. Returns a string "Found at [row][col]"
      * or "Not found". Uses a labeled break to exit both loops once found.
      *
@@ -68,7 +60,7 @@ public class LoopExercises {
      * @return description of where the target was found, or "Not found"
      */
     public static String findInMatrix(int[][] matrix, int target) {
-    String result = "Not found";
+        String result = "Not found";
         // TODO: 3 - Define a label (e.g., 'search:') before the outer loop.
         //  Use nested loops to iterate through the matrix.
         //  When the target is found, set result to "Found at [row][col]" and
@@ -78,37 +70,34 @@ public class LoopExercises {
         //matrix.length gives how many inner arrays/rows there are.
         // matrix[i].length gives how many items are inside that row.
         //int target;
-    search:
-    for(int i = 0; i < matrix.length; i++){
-        // row iterator needs no code inside.
-        //for this row, check column 0 in next loop, once done do the next row...
-        for(int j = 0; j<matrix[i].length; j++){
-            if(matrix[i][j] == target){
-                result = ("Found at row: " + i + ", col: "+ j );
-                break search;
+        search:
+        for(int i = 0; i < matrix.length; i++){
+            // row iterator needs no code inside.
+            //for this row, check column 0 in next loop, once done do the next row...
+            for(int j = 0; j<matrix[i].length; j++){
+                if(matrix[i][j] == target){
+                    result = ("Found at row: " + i + ", col: "+ j );
+                    break search;
+                }
             }
         }
+        return result;
     }
-    return result;
-}
-
-
     /*
      * Computes the factorial of n using a loop with an accumulator.
      * factorial(5) = 5 * 4 * 3 * 2 * 1 = 120
      *
      * @param n a non-negative integer
      * @return n!
-    */
-        public static long factorial(int n) {
-            long accumulator = 1;
-            // TODO: 4 - Use a for loop from 1 to n (inclusive), multiplying accumulator
-            //  by the loop variable each iteration. Return the result.
-            for(int i = 1; i <= n; i++){
-                accumulator *= i;
-            }
-            return accumulator;
+     */
+    public static long factorial(int n) {
+        long accumulator = 1;
+        // TODO: 4 - Use a for loop from 1 to n (inclusive), multiplying accumulator
+        //  by the loop variable each iteration. Return the result.
+        for(int i = 1; i <= n; i++){
+            accumulator *= i;
         }
+        return accumulator;
     }
     /*
      * Prints a pyramid pattern of stars with the given number of rows.
@@ -143,28 +132,23 @@ public class LoopExercises {
      * Returns elements of the array in reverse order as a comma-separated string.
      * Example: [1, 2, 3] -> "3, 2, 1"
      *
-     * @param arr an array of integers
+     * //@param arr an array of integers
      * @return a string with elements in reverse, separated by ", "
      */
-    class Main {
-        public static void main(String[] args) {
-            System.out.println(iterateBackwards(new int[]{1, 2, 3, 4, 5}));
-        }
-        public static String iterateBackwards(int[] arr) {
-            StringBuilder sb = new StringBuilder();
-            // TODO: 6 - Use a for loop starting from the last index down to 0.
-            //  Append each element to sb. Add ", " between elements but not after the last one.
-            // StringBuilder is part of Java
-            // https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html
-            // stringbuilder is a mutable sequence of characters.
-
-            for(int i = arr.length - 1; i >= 0; i--){ // array's last index is legnth - 1
-                sb.append(arr[i] + ", ");
+    public static String iterateBackwards(int[] arr) {
+        StringBuilder sb = new StringBuilder();
+        // TODO: 6 - Use a for loop starting from the last index down to 0.
+        //  Append each element to sb. Add ", " between elements but not after the last one.
+        // StringBuilder is part of Java
+        // https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html
+        // stringbuilder is a mutable sequence of characters.
+        for(int i = arr.length - 1; i >= 0; i--){ // array's last index is legnth - 1
+            sb.append(arr[i]);
+            if( arr[i] != 0){
+                sb.append(", ");
             }
-            return sb.toString();
-        }
+        } return sb.toString();
     }
-
     /**
      * Simulates a simple number guessing scenario. Keeps generating random numbers
      * between 1 and 100 (inclusive) in an infinite loop until the target is hit.
@@ -173,7 +157,6 @@ public class LoopExercises {
      * @param target the number to find (1-100)
      * @return the number of iterations before the target was generated
      */
-
     public static int countUntilMatch(int target) {
         int attempts = 0;
         java.util.Random random = new java.util.Random();
@@ -181,26 +164,25 @@ public class LoopExercises {
         //  Each iteration: increment attempts, generate a random int between 1 and 100,
         //  and break if it matches the target.
         int a = 0;
-;
+
         while(a < 8){
             attempts++;
-            double genNum = random();
-           System.out.println(genNum* 10);
-         System.out.println((int)genNum);
-            if(genNum == target){
+            double genNum = random.nextInt(100);
+            int intNum = (int)genNum;
+            System.out.println(intNum);
+            System.out.println(target);
+            if(intNum == target){
                 break;
             }
         }
         return attempts;
     }
-
-
     public static void main(String[] args) {
         System.out.println("=== Multiplication Table (4x4) ===");
-        //printMultiplicationTable(4);
+        printMultiplicationTable(4);
 
         System.out.println("\n=== Sum with Skip and Stop (n=50) ===");
-        //System.out.println("Sum: " + sumWithSkipAndStop(50));
+        System.out.println("Sum: " + sumWithSkipAndStop(50));
 
         System.out.println("\n=== Find in Matrix ===");
         int[][] matrix = {

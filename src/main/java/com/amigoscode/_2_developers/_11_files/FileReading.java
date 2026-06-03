@@ -46,9 +46,7 @@ public class FileReading {
         //      read lines in a loop using reader.readLine() until it returns null.
         //      Print each line.
         //  }
-
     }
-
     /**
      * Counts the number of lines in a file.
      *
@@ -62,7 +60,6 @@ public class FileReading {
         //  or use Files.lines() with .count() for a stream-based approach.
         return 0;
     }
-
     /**
      * Searches for a word in a file and returns all lines containing that word.
      *
@@ -78,7 +75,6 @@ public class FileReading {
         //  or use Files.readAllLines().stream().filter(...).toList()
         return null;
     }
-
     /**
      * Reads the entire file contents into a single String.
      *
@@ -91,7 +87,6 @@ public class FileReading {
         //  as a single String. Return it.
         return null;
     }
-
     /**
      * Attempts to read a file that does not exist. Handles the exception gracefully.
      *
@@ -105,10 +100,8 @@ public class FileReading {
         //  Catch IOException and return "Error reading file: " + e.getMessage().
         return null;
     }
-
     public static void main(String[] args) throws IOException {
         String testFile = "test-input.txt";
-
         // First, create a test file so the exercises can run
         Files.writeString(Path.of(testFile),
                 "Hello World\nJava is great\nPractice makes perfect\nHello again\nJava rocks!");

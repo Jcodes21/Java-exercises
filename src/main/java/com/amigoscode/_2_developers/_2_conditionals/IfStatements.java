@@ -33,10 +33,11 @@ public class IfStatements {
     public static String isEligibleForLoan(int age, double income, boolean hasGuarantor) {
         // TODO: 2 - Use a single return statement with && and || operators
         //  to express the eligibility condition described above.
-        if(age > 18 && income > 30.000 || hasGuarantor){
-        return isEligibleForLoan(age, income, hasGuarantor);
+        if (age > 18 && income > 30.000 || hasGuarantor) {
+            return isEligibleForLoan(age, income, hasGuarantor);
+        }
+        return null;
     }
-
     /**
      * Returns a letter grade using nested ternary operators.
      * 90-100 -> "A", 80-89 -> "B", 70-79 -> "C", 60-69 -> "D", below 60 -> "F"

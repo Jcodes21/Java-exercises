@@ -15,7 +15,6 @@ import java.util.List;
  * classic java.io API. Learn to write, append, and copy files.
  */
 public class FileWriting {
-
     /**
      * Writes a string to a file, creating the file if it doesn't exist
      * or overwriting it if it does.
@@ -27,7 +26,14 @@ public class FileWriting {
     public static void writeString(String filePath, String content) throws IOException {
         // TODO: 1 - Use Files.writeString(Path.of(filePath), content) to write the content.
         //  This creates the file if it doesn't exist, or overwrites it if it does.
-
+        try(){
+        Files.writeString();
+        Files.flush();
+        Files.close();
+            catch (IOException e){
+            System.out.println(e.getMessage());
+        }
+            }
     }
 
     /**

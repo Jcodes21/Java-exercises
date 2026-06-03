@@ -23,8 +23,8 @@ public class PackageDemo {
     public static void useListFromUtil() {
         // TODO: 1 (continued) - Create a List<String> using ArrayList, add three fruits,
         //  and print the list. Make sure you have the import statements at the top.
-           // List<String> fruitList = new ArrayList<>("Cherry","Apple", "Grape");
-       // System.out.println(fruitList);
+        List<String> fruitList = new ArrayList<>("Cherry","Apple", "Grape");
+       System.out.println(fruitList);
     }
 
     /**
