@@ -45,20 +45,22 @@ public class LoopExercises {
         int sum = 0;
         // TODO: 2 - Loop from 1 to n. Use 'continue' to skip multiples of 3.
         //  Use 'break' to stop if sum exceeds 100. Add the current number to sum otherwise.
-        for(int i=1; i <= n; i++){
-            if(i % 3 != 0){
-                System.out.println(i);
+        for (int i = 1; i < n; i++) {
+
+            if (i % 3 == 0) {
                 continue;
             }
-            if(i == 101){
+            if (sum + i > 100) {
                 break;
             }
+            sum += i;
         }
         return sum;
     }
 }
 
-    /**
+
+/**
      * Searches a 2D array for a target value. Returns a string "Found at [row][col]"
      * or "Not found". Uses a labeled break to exit both loops once found.
      *
