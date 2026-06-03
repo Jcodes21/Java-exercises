@@ -59,7 +59,6 @@ public class LoopExercises {
     }
 }
 
-
 /**
      * Searches a 2D array for a target value. Returns a string "Found at [row][col]"
      * or "Not found". Uses a labeled break to exit both loops once found.
@@ -69,28 +68,38 @@ public class LoopExercises {
      * @return description of where the target was found, or "Not found"
      */
     public static String findInMatrix(int[][] matrix, int target) {
-        String result = "Not found";
+    String result = "Not found";
         // TODO: 3 - Define a label (e.g., 'search:') before the outer loop.
         //  Use nested loops to iterate through the matrix.
         //  When the target is found, set result to "Found at [row][col]" and
         //  use 'break search;' to exit both loops.
-        //search
-        //int [][] matrix = {{5,4,3} , {3,6,4}};
-        //for(int[] matrices : matrix){i
+        // In Java, a label is like a name you attach to a loop so you can break out of that specific loop.
+        //A 2D array is an array of arrays.
+        //matrix.length gives how many inner arrays/rows there are.
+        // matrix[i].length gives how many items are inside that row.
+        //int target;
+    search:
+    for(int i = 0; i < matrix.length; i++){
+        // row iterator needs no code inside.
+        //for this row, check column 0 in next loop, once done do the next row...
+        for(int j = 0; j<matrix[i].length; j++){
+            if(matrix[i][j] == target){
+                result = ("Found at row: " + i + ", col: "+ j );
+                break search;
+            }
+        }
+    }
+    return result;
+}
+}
 
-        //for(){
-        //}
-
-        //return result;
-    //}
-
-    /**
+    /*
      * Computes the factorial of n using a loop with an accumulator.
      * factorial(5) = 5 * 4 * 3 * 2 * 1 = 120
      *
      * @param n a non-negative integer
      * @return n!
-
+    */
     public static long factorial(int n) {
         long accumulator = 1;
         // TODO: 4 - Use a for loop from 1 to n (inclusive), multiplying accumulator
@@ -100,8 +109,7 @@ public class LoopExercises {
         }
         return result;
     }
-     */
-    /**
+    /*
      * Prints a pyramid pattern of stars with the given number of rows.
      * Example for rows=4:
      *       *
@@ -110,7 +118,7 @@ public class LoopExercises {
      *    *******
      *
      * @param rows the number of rows in the pyramid
-
+     */
     public static void printPyramid(int rows) {
         // TODO: 5 - Use nested loops to print a centered pyramid of stars.
         //  For each row i (0-based), print (rows - i - 1) spaces followed by (2 * i + 1) stars.
@@ -129,10 +137,6 @@ public class LoopExercises {
             System.out.println(); // new line after each row, notice for loop above is closed so stars can print out before new line
         }
     }
-     */
-    // For each row i (0-based) - i dont understand instructions n seek clarity
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 
     /**
      * Returns elements of the array in reverse order as a comma-separated string.
@@ -160,7 +164,7 @@ public class LoopExercises {
      * @param target the number to find (1-100)
      * @return the number of iterations before the target was generated
      */
-    /**
+
     public static int countUntilMatch(int target) {
         int attempts = 0;
         java.util.Random random = new java.util.Random();
@@ -172,15 +176,15 @@ public class LoopExercises {
         while(a < 8){
             attempts++;
             double genNum = random();
-           // System.out.println(genNum* 10);
-//            System.out.println((int)genNum);
+           System.out.println(genNum* 10);
+         System.out.println((int)genNum);
             if(genNum == target){
                 break;
             }
         }
         return attempts;
     }}
-     */
+
 
     public static void main(String[] args) {
         System.out.println("=== Multiplication Table (4x4) ===");
