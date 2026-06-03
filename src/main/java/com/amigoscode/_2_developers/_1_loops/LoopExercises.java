@@ -146,15 +146,23 @@ public class LoopExercises {
      * @param arr an array of integers
      * @return a string with elements in reverse, separated by ", "
      */
-    public static String iterateBackwards(int[] arr) {
-        StringBuilder sb = new StringBuilder();
-        // TODO: 6 - Use a for loop starting from the last index down to 0.
-        //  Append each element to sb. Add ", " between elements but not after the last one.
-
-        for(int i = 0; i < 10;i++){
-
+    class Main {
+        public static void main(String[] args) {
+            System.out.println(iterateBackwards(new int[]{1, 2, 3, 4, 5}));
         }
-        return sb.toString();
+        public static String iterateBackwards(int[] arr) {
+            StringBuilder sb = new StringBuilder();
+            // TODO: 6 - Use a for loop starting from the last index down to 0.
+            //  Append each element to sb. Add ", " between elements but not after the last one.
+            // StringBuilder is part of Java
+            // https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html
+            // stringbuilder is a mutable sequence of characters.
+
+            for(int i = arr.length - 1; i >= 0; i--){ // array's last index is legnth - 1
+                sb.append(arr[i] + ", ");
+            }
+            return sb.toString();
+        }
     }
 
     /**
@@ -184,7 +192,7 @@ public class LoopExercises {
             }
         }
         return attempts;
-    }}
+    }
 
 
     public static void main(String[] args) {
