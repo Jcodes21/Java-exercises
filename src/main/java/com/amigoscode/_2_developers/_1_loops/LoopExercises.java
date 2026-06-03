@@ -43,20 +43,20 @@ public class LoopExercises {
      */
     public static int sumWithSkipAndStop(int n) {
         int sum = 0;
-        int n1 = 101;
         // TODO: 2 - Loop from 1 to n. Use 'continue' to skip multiples of 3.
         //  Use 'break' to stop if sum exceeds 100. Add the current number to sum otherwise.
-        for(int i=0; i < n1; i++){
-            System.out.println(i);
-            if(sum % 3 == 0){
+        for(int i=1; i <= n; i++){
+            if(i % 3 != 0){
+                System.out.println(i);
                 continue;
             }
-            if(sum > 100){
+            if(i == 101){
                 break;
             }
         }
         return sum;
     }
+}
 
     /**
      * Searches a 2D array for a target value. Returns a string "Found at [row][col]"
@@ -74,13 +74,13 @@ public class LoopExercises {
         //  use 'break search;' to exit both loops.
         //search
         //int [][] matrix = {{5,4,3} , {3,6,4}};
-        for(int[] matrices : matrix){i
+        //for(int[] matrices : matrix){i
 
-        for(){
-        }
+        //for(){
+        //}
 
-        return result;
-    }
+        //return result;
+    //}
 
     /**
      * Computes the factorial of n using a loop with an accumulator.
@@ -88,7 +88,7 @@ public class LoopExercises {
      *
      * @param n a non-negative integer
      * @return n!
-     */
+
     public static long factorial(int n) {
         long accumulator = 1;
         // TODO: 4 - Use a for loop from 1 to n (inclusive), multiplying accumulator
@@ -98,7 +98,7 @@ public class LoopExercises {
         }
         return result;
     }
-
+     */
     /**
      * Prints a pyramid pattern of stars with the given number of rows.
      * Example for rows=4:
@@ -108,7 +108,7 @@ public class LoopExercises {
      *    *******
      *
      * @param rows the number of rows in the pyramid
-     */
+
     public static void printPyramid(int rows) {
         // TODO: 5 - Use nested loops to print a centered pyramid of stars.
         //  For each row i (0-based), print (rows - i - 1) spaces followed by (2 * i + 1) stars.
@@ -127,7 +127,7 @@ public class LoopExercises {
             System.out.println(); // new line after each row, notice for loop above is closed so stars can print out before new line
         }
     }
-
+     */
     // For each row i (0-based) - i dont understand instructions n seek clarity
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -158,6 +158,7 @@ public class LoopExercises {
      * @param target the number to find (1-100)
      * @return the number of iterations before the target was generated
      */
+    /**
     public static int countUntilMatch(int target) {
         int attempts = 0;
         java.util.Random random = new java.util.Random();
@@ -177,6 +178,7 @@ public class LoopExercises {
         }
         return attempts;
     }}
+     */
 
     public static void main(String[] args) {
         System.out.println("=== Multiplication Table (4x4) ===");
