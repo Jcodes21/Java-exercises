@@ -20,10 +20,15 @@ public class PackageDemo {
     /**
      * Creates a List of three fruit names and prints it.
      */
-    public static void useListFromUtil() {
+        public static void useListFromUtil() {
         // TODO: 1 (continued) - Create a List<String> using ArrayList, add three fruits,
         //  and print the list. Make sure you have the import statements at the top.
-        List<String> fruitList = new ArrayList<>("Cherry","Apple", "Grape");
+        //ArrayList does not have a constructor that accepts items one-by-one like this
+        //List<String> fruitList = new ArrayList<>("Cherry","Apple", "Grape");
+        List<String> fruitList = new ArrayList<>();
+        fruitList.add("Cherry");
+        fruitList.add("Apple");
+        fruitList.add("Strawberry");
        System.out.println(fruitList);
     }
 
