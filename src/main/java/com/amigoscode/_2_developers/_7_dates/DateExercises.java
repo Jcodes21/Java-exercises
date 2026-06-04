@@ -82,12 +82,17 @@ public class DateExercises {
      * @param date2 the second date
      * @return "before" if date1 is before date2, "after" if after, "equal" if same
      */
-    public static String compareDates(LocalDate date1, LocalDate date2) {
+ public static String compareDates(LocalDate date1, LocalDate date2) {
         // TODO: 5 - Use isBefore() and isAfter() methods on date1 to compare with date2.
         //  Return "before", "after", or "equal".
-        return null;
-    }
-
+        if(date1.isBefore(date2)){
+            return "before";
+        }
+        else if(date1.isAfter(date2)){
+            return "after";
+        }
+        return "equal";
+            }
     /**
      * Formats a date using the given pattern.
      * Example patterns: "dd/MM/yyyy", "MMMM d, yyyy", "yyyy-MM-dd"
