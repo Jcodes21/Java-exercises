@@ -59,10 +59,20 @@ public class DateExercises {
         // TODO: 4 - Use plusDays(), plusMonths(), and plusYears() on the date.
         //  Remember: LocalDate is immutable, so each method returns a NEW LocalDate.
         //  Chain the calls or apply them sequentially.
-        date.plusDays(8);
-        date.plusMonths(2);
-        date.plusYears(5000);
-        return null;
+        //each line updates date to the new LocalDate
+        date = date.plusDays(days);
+        date = date.plusMonths(months);
+        date = date.plusYears(years);
+        return date;
+
+        /*
+        chained way:
+        return.date.plusDays(days)
+                   .plusMonth(Month)
+                   .plusYears(Years);
+        */
+        
+
     }
 
     /**
