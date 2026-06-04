@@ -90,6 +90,20 @@ class Main {
      * @param text a string that might be null
      * @return the length of the string, or -1 if null
      */}
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("\n=== String Equality ===");
+        System.out.println("'abc' equals 'abc': " + safeEquals("abc", "abc"));
+        System.out.println("'abc' equals null: " + safeEquals("abc", null));
+        System.out.println("null equals null: " + safeEquals(null, null));
+    /**
+     * Returns the length of the given string, or -1 if the string is null.
+     * Must perform a null check before calling any method on the string.
+     *
+     * @param text a string that might be null
+     * @return the length of the string, or -1 if null
+     */}
    public static boolean safeEquals(String a, String b) {
         // TODO: 5 - Compare strings properly:
         //  If both are null, return true.
@@ -107,7 +121,6 @@ class Main {
                return a.equals(b);
             }
     }}
-
 
     /**
      * Returns the name of the day of the week for numbers 1 (Monday) through 7 (Sunday).
