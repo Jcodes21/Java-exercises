@@ -77,26 +77,6 @@ public class IfStatements {
      * @return true if both strings are equal (or both null)
      */
 
-class Main {
-    public static void main(String[] args) {
-        System.out.println("\n=== String Equality ===");
-        System.out.println("'abc' equals 'abc': " + safeEquals("abc", "abc"));
-        System.out.println("'abc' equals null: " + safeEquals("abc", null));
-        System.out.println("null equals null: " + safeEquals(null, null));
-    /**
-     * Returns the length of the given string, or -1 if the string is null.
-     * Must perform a null check before calling any method on the string.
-     *
-     * @param text a string that might be null
-     * @return the length of the string, or -1 if null
-     */}
-
-class Main {
-    public static void main(String[] args) {
-        System.out.println("\n=== String Equality ===");
-        System.out.println("'abc' equals 'abc': " + safeEquals("abc", "abc"));
-        System.out.println("'abc' equals null: " + safeEquals("abc", null));
-        System.out.println("null equals null: " + safeEquals(null, null));
     /**
      * Returns the length of the given string, or -1 if the string is null.
      * Must perform a null check before calling any method on the string.
@@ -130,7 +110,7 @@ class Main {
      * @param day the day number (1-7)
      * @return the name of the day
      */
-    public static String getDayName(int day) {
+      public static String getDayName(int day) {
         // TODO: 6 - Use a switch expression with arrow syntax to return the day name.
         //  Example:
         //  return switch (day) {
@@ -140,19 +120,18 @@ class Main {
         //      default -> "Invalid";
         //  };
             // METHOD WANTS INT
-        String day = "Monday";
-        switch(day){
-            case 1 ->  System.out.println("Monday");
-            case 2 ->  System.out.println("Tuesday");
-            case 3 ->  System.out.println("Wednesday");
-            case 4 ->  System.out.println("Thursday");
-            case 5 ->  System.out.println("Friday");
-            case 6 ->  System.out.println("Saturday");
-            case 7 ->  System.out.println("Sunday");
-            default: System.out.println("Invalid");
+        //String day = "Monday";
+        return switch(day){ //return infront: “Whatever comes after me is the answer this method gives back.”
+            case 1 -> "Monday";
+            case 2 ->  "Tuesday";
+            case 3 ->  "Wednesday";
+            case 4 ->  "Thursday";
+            case 5 ->  "Friday";
+            case 6 ->  "Saturday";
+            case 7 ->  "Sunday";
+            default -> "Invalid";
         }
-        return null;
-    }
+    }}
 
     public static void main(String[] args) {
         System.out.println("=== Ternary Operator ===");
