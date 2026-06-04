@@ -76,19 +76,38 @@ public class IfStatements {
      * @param b second string (may be null)
      * @return true if both strings are equal (or both null)
      */
-    public static boolean safeEquals(String a, String b) {
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("\n=== String Equality ===");
+        System.out.println("'abc' equals 'abc': " + safeEquals("abc", "abc"));
+        System.out.println("'abc' equals null: " + safeEquals("abc", null));
+        System.out.println("null equals null: " + safeEquals(null, null));
+    /**
+     * Returns the length of the given string, or -1 if the string is null.
+     * Must perform a null check before calling any method on the string.
+     *
+     * @param text a string that might be null
+     * @return the length of the string, or -1 if null
+     */}
+   public static boolean safeEquals(String a, String b) {
         // TODO: 5 - Compare strings properly:
         //  If both are null, return true.
         //  If only one is null, return false.
         //  Otherwise, use a.equals(b) — never use == for string content comparison.
-            String a = "";
-            String b = "";
-        if(a.equals(b) && b == null){
-            return true;
-        }
-        else {
-        return false;
+            if(a == null && b == null){
+                return true;
+            }
+            else if(a == null || b == null){
+                return false;
+            }
+            else{
+               // boolean ans = a.equals(b);
+               // return ans;
+               return a.equals(b);
+            }
     }}
+
 
     /**
      * Returns the name of the day of the week for numbers 1 (Monday) through 7 (Sunday).
