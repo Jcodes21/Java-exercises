@@ -5,7 +5,7 @@ package com.amigoscode._2_developers._6_strings;
  * Practice the most commonly used String methods in Java. Strings are immutable
  * in Java — every method returns a NEW string rather than modifying the original.
  */
-//public class StringMethods {
+public class StringMethods {
     /**
      * Checks if two strings are equal, first case-sensitive, then case-insensitive.
      * Returns a description of the comparison results.
@@ -13,16 +13,15 @@ package com.amigoscode._2_developers._6_strings;
      * @param a first string
      * @param b second string
      * @return e.g., "equals: false, equalsIgnoreCase: true"
-
+*/
     public static String compareEquality(String a, String b) {
             // TODO: 1 - Use equals() and equalsIgnoreCase() to compare a and b.
             //  Return a string in the format: "equals: <result>, equalsIgnoreCase: <result>"
             String eq = a.equals(b);
             String eqIC = a.equalsIgnoreCase(b);
-            String result = "equals: " + + "equalsIgnoreCase:";
+            String result = "equals: " + "equalsIgnoreCase:";
             return null;
     }
-*>
     /**
      * Compares two strings lexicographically using compareTo().
      * Returns "before", "equal", or "after" depending on the result.
@@ -113,7 +112,7 @@ package com.amigoscode._2_developers._6_strings;
         filename.endsWith(extension);
         return null;
     }
-*/
+
     /**
      * Extracts a substring from the given text.
      *
@@ -128,7 +127,7 @@ package com.amigoscode._2_developers._6_strings;
         String result = text.substring(beginIndex, endIndex);
         return result;
     }
-*/
+
     /**
      * Formats a receipt line with item name, quantity, and price.
      * Example: "  Apple       x3      $2.50"
@@ -145,11 +144,11 @@ package com.amigoscode._2_developers._6_strings;
 
         return null;
     }
-
+*/
     public static void main(String[] args) {
         System.out.println("=== Equality ===");
         System.out.println(compareEquality("Hello", "hello"));
-
+/*
         System.out.println("\n=== Lexicographic ===");
         System.out.println("apple vs banana: " + compareLexicographic("apple", "banana"));
 
@@ -171,6 +170,6 @@ package com.amigoscode._2_developers._6_strings;
         System.out.println("\n=== Formatted Receipt ===");
         System.out.println(formatReceipt("Apple", 3, 2.50));
         System.out.println(formatReceipt("Banana", 12, 1.25));
+        */
     }
 }
-*/
