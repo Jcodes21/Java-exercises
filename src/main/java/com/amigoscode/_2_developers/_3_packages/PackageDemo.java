@@ -49,10 +49,10 @@ public class PackageDemo {
         // TODO: 3 - Create a java.util.HashMap<String, Integer> using the fully qualified
         //  class name (no import). Put two entries (e.g., "Alice"->90, "Bob"->85) and print it.
         //  Example: java.util.HashMap<String, Integer> map = new java.util.HashMap<>();
-        HashMap<String, Integer> hmap = new HashMap();
+        java.util.HashMap<String, Integer> hmap = new java.util.HashMap<>();
 
         hmap.put("Alice",90);
-        hmap.put("Alice",85);
+        hmap.put("Bob",85);
 
         System.out.println(hmap);
     }
