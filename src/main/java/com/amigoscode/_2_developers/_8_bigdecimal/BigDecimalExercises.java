@@ -23,7 +23,7 @@ public class BigDecimalExercises {
         // TODO: 1 - Create and return a BigDecimal using new BigDecimal(value).
         //  The String constructor preserves the exact decimal value.
         //  NEVER use new BigDecimal(0.1) — see TODO 6 for why.
-        BigDecimal bD = new BigDecimal();
+        BigDecimal bD = new BigDecimal(0.6);
         return bD;
     }
 
@@ -37,8 +37,8 @@ public class BigDecimalExercises {
     public static BigDecimal addValues(BigDecimal a, BigDecimal b) {
         // TODO: 2 - Use the add() method to add a and b. Return the result.
         //  Remember: BigDecimal is immutable, so add() returns a NEW BigDecimal.
-        BigDecimal = a + b;
-        return null;
+        BigDecimal R = a.add(b);
+        return R;
     }
 
     /**
@@ -50,8 +50,8 @@ public class BigDecimalExercises {
      */
     public static BigDecimal multiplyValues(BigDecimal a, BigDecimal b) {
         // TODO: 3 - Use the multiply() method to multiply a and b. Return the result.
-        BigDecimal result = a * b;
-        return null;
+        BigDecimal result = a.multiply(b);
+        return result;
     }
 
     /**
@@ -85,8 +85,7 @@ public class BigDecimalExercises {
         // TODO: 5 - Use a.compareTo(b) to compare the two values.
         //  Return the result (which will be -1, 0, or 1).
         //  Do NOT use equals() for numeric comparison!
-        BigDecimal result = a.compareTo(b);
-        return result;
+        return a.compareTo(b);
     }
 
     /**
