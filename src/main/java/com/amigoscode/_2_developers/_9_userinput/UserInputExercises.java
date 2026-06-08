@@ -37,12 +37,13 @@ public class UserInputExercises {
         //    catch InputMismatchException, print "Invalid input!", and return -1.
         //  Don't forget to consume the leftover newline with scanner.nextLine()
         //  after reading the int (both in success and failure cases).
-        Scanner scan = new Scanner(System.in);
+        int input = 0; 
+        //Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a number");
         try {
-            int input = scan.nextInt();
+            input = scanner.nextInt();
         }
-        catch(InputMismatchException){
+        catch(InputMismatchException e){
             System.out.println("Invalid Field");
         }
         return input;
@@ -62,9 +63,10 @@ public class UserInputExercises {
         //  Otherwise, print "You entered: " followed by the input.
         System.out.println("Enter text(or 'quit' to stop");
         String text = scanner.nextLine();
-        while (text != "quit"){
+        while (!text.equalsIgnoreCase("quit")){
+            //text != "quit"  This checks object reference, not the actual text:
             System.out.println("you entered: "+ text);
-            scanner.nextLine();
+            text = scanner.nextLine();
         }
     }
 
@@ -76,13 +78,11 @@ public class UserInputExercises {
      */
     public static boolean isValidAge(int age) {
         // TODO: 4 - Return true if age is between 0 and 150 (inclusive), false otherwise.
-        Scanner scan = new Scanner(System.in);
-        int input = scan.nextInt();
         //boolean answer = isValidAge(input);
-        if(input >= 0 && input <= 150){
+        if(age >= 0 && age <= 150){
         return true;
-    }
-
+        } return false;
+    } 
     /**
      * Validates that an email address contains an "@" symbol.
      *
@@ -91,7 +91,7 @@ public class UserInputExercises {
      */
     public static boolean isValidEmail(String email) {
         // TODO: 5 - Return true if email is not null and contains "@", false otherwise.
-            String email = scan.nextLine();
+
             if(email.contains("@")){
                 return true;
             }
