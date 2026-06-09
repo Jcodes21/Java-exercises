@@ -23,7 +23,14 @@ public class TryCatch {
         //  try to return arr[index].
         //  catch ArrayIndexOutOfBoundsException, print "Index out of bounds: " + index,
         //  and return -1.
-        return 0;
+        try{
+            return arr[index];
+        }
+        catch(ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array out of bounds: " + index);
+            return -1;
+        }
+       // return 0;
     }
 
     /**
@@ -36,7 +43,13 @@ public class TryCatch {
     public static int safeParseInt(String text) {
         // TODO: 2 - Wrap Integer.parseInt(text) in a try-catch block.
         //  catch NumberFormatException, print "Cannot parse: " + text, and return 0.
-        return 0;
+        try {
+            return Integer.parseInt(text);
+        }
+        catch (NumberFormatException e){
+            System.out.println("Cannot parse: " + text);
+            return 0;
+        }
     }
 
     /**
@@ -54,7 +67,18 @@ public class TryCatch {
         //  finally: print "Division operation completed."
         //  Return the result. (You'll need a local variable since return in try
         //  executes after finally.)
-        return 0;
+        int result;
+        try{
+            result = a / b;
+        }
+        catch (ArithmeticException e) {
+            System.out.println("Cannot divide by zero!");
+            result = 0;
+        }
+        finally{
+            System.out.println("Division operation completed.");
+        }
+            return result;
     }
 
     /**
@@ -72,7 +96,15 @@ public class TryCatch {
         //  Catch both ArrayIndexOutOfBoundsException and NumberFormatException
         //  in a single catch block using: catch (ExType1 | ExType2 e)
         //  Print "Error: " + e.getMessage() and return -1.
-        return 0;
+        try{
+            int result = data[index];
+            Integer.parseInt(result);
+        }
+        catch(ArrayIndexOutOfBoundsException | NumberFormatException e){
+            System.out.println("Error: " + e.getMessage());
+            return -1;
+        }
+        //return 0;
     }
 
     /**
