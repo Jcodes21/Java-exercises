@@ -13,7 +13,10 @@ public class ClassesAndObjects {
     // TODO: 1 - Create a static inner class called Person with:
     //  - A private String field 'name'
     //  - A private int field 'age'
-
+class Person {
+    private String name;
+    private int age;
+    }
 
     // TODO: 2 - Add a constructor to Person that takes String name and int age,
     //  and assigns them to the fields.

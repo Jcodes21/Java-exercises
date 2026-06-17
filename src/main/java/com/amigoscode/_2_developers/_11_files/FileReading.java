@@ -30,7 +30,8 @@ public class FileReading {
     public static List<String> readAllLines(String filePath) throws IOException {
         // TODO: 1 - Use Files.readAllLines(Path.of(filePath)) to read all lines.
         //  Return the resulting List<String>.
-        return null;
+        List<String> result = Files.readAllLines(Path.of("test-input.txt"));
+        return result;
     }
 
     /**
@@ -45,7 +46,8 @@ public class FileReading {
         //  try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
         //      read lines in a loop using reader.readLine() until it returns null.
         //      Print each line.
-        //  }
+        //
+
     }
     /**
      * Counts the number of lines in a file.
