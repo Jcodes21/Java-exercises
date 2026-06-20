@@ -17,10 +17,9 @@ public class StringMethods {
     public static String compareEquality(String a, String b) {
             // TODO: 1 - Use equals() and equalsIgnoreCase() to compare a and b.
             //  Return a string in the format: "equals: <result>, equalsIgnoreCase: <result>"
-            String eq = a.equals(b);
-            String eqIC = a.equalsIgnoreCase(b);
-            String result = "equals: " + "equalsIgnoreCase:";
-            return null;
+             Boolean eq = a.equals(b);
+             Boolean eqIC = a.equalsIgnoreCase(b);
+              return "equals: " + eq + "equalsIgnoreCase:" + eqIC;
     }
     /**
      * Compares two strings lexicographically using compareTo().

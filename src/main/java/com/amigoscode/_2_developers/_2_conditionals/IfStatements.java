@@ -1,5 +1,3 @@
-package com.amigoscode._2_developers._2_conditionals;
-
 /**
  * If Statements and Conditional Exercises
  *
@@ -34,9 +32,9 @@ public class IfStatements {
         // TODO: 2 - Use a single return statement with && and || operators
         //  to express the eligibility condition described above.//Eligible if: age is over 18 AND income is over30000 OR they have a guarantor
         // the teneray operator allows the boolean to be converted into the desired return type of String
-        return (age > 18 && income > 30.000 || hasGuarantor) ?
+        return (age >= 18 && income >= 30000 || hasGuarantor) ?
         "is eligable" : "Not eligible";
-}}
+}
     /**
      * Returns a letter grade using nested ternary operators.
      * 90-100 -> "A", 80-89 -> "B", 70-79 -> "C", 60-69 -> "D", below 60 -> "F"
@@ -83,7 +81,7 @@ public class IfStatements {
      *
      * @param text a string that might be null
      * @return the length of the string, or -1 if null
-     */}
+     */
    public static boolean safeEquals(String a, String b) {
         // TODO: 5 - Compare strings properly:
         //  If both are null, return true.
@@ -100,7 +98,7 @@ public class IfStatements {
                // return ans;
                return a.equals(b);
             }
-    }}
+    }
 
     /**
      * Returns the name of the day of the week for numbers 1 (Monday) through 7 (Sunday).
@@ -130,8 +128,7 @@ public class IfStatements {
             case 6 ->  "Saturday";
             case 7 ->  "Sunday";
             default -> "Invalid";
-        }
-    }}
+        };}
 
     public static void main(String[] args) {
         System.out.println("=== Ternary Operator ===");
@@ -161,5 +158,5 @@ public class IfStatements {
         System.out.println("Day 1: " + getDayName(1));
         System.out.println("Day 5: " + getDayName(5));
         System.out.println("Day 9: " + getDayName(9));
-    }
-}
+    }}
+
