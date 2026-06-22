@@ -1,5 +1,4 @@
 package com.amigoscode._2_developers._12_classes;
-
 import java.sql.SQLOutput;
 
 /**
