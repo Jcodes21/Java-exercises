@@ -1,4 +1,5 @@
 package com.amigoscode._2_developers._12_classes;
+import java.sql.SQLOutput;
 import java.util.Objects;
 /**
  * Classes and Objects Exercises
@@ -13,6 +14,19 @@ public class ClassesAndObjects {
     static class Person {
         private String name;
         private int age;
+
+
+        @Override
+        public boolean equals(Object o) {
+            if (o == null || getClass() != o.getClass()) return false;
+            Person person = (Person) o;
+            return age == person.age && Objects.equals(name, person.name) && Objects.equals(otherPerson, person.otherPerson);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(name, age, otherPerson);
+        }
 
         // TODO: 2 - Add a constructor to Person that takes String name and int age,
         //  and assigns them to the fields.
@@ -43,9 +57,9 @@ public class ClassesAndObjects {
         //  - Annotate with @Override
         //  Hint: use instanceof, then cast and compare fields.
         //  Also override hashCode() using Objects.hash(name, age).
-        @Override
-        Person otherPerson = person;
-        if(Person.equals(otherPerson))
+        // onj1 == obj 2 we dont want to do this, this is comparing their memory addresses, where they live, inside the heap
+
+
         public static void main(String[] args) {
             // TODO: 6 - Create at least three Person objects:
             //  - One using the two-arg constructor (e.g., "Alice", 30)
@@ -55,6 +69,17 @@ public class ClassesAndObjects {
             //  Test equals(): compare person1 with person3 (should be true),
             //  and person1 with person2 (should be false).
             //  Print the comparison results.
+
+            Person personA = new person("Alice", 32);
+            Person personB = new person();
+            Person personC = new person("Allice, 32");
+
+
+            System.out.println(personA);
+            System.out.println(personB;
+            System.out.println(personC);
+            System.out.println(personA.equals(personC));
+
 
 
             // TODO: 7 - Demonstrate constructor chaining with this():
